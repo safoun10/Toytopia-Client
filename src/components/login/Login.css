@@ -1,0 +1,25 @@
+.login-form {
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 100px;
+}
+
+.input-field {
+    background-color: rgba(128, 128, 128, 0.118);
+    color: rgb(65, 65, 65);
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 25px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.input-field:focus {
+    outline: none;
+    border-bottom: 3px solid var(--color-four);
+}
+
+.btn-auth {
+    background: rgb(100, 92, 187) !important;
+    background: linear-gradient(90deg, rgba(100, 92, 187, 1) 0%, rgba(235, 199, 230, 1) 100%) !important;
+}
