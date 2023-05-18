@@ -55,11 +55,11 @@ const TopNav = () => {
 			</div>
 
 			<div>
-				<div className="btn btn-bg-gradient">
-					<Link className="text-decoration-none text-white">
-						Login
-					</Link>
-				</div>
+				<Link to={"/login"} className="text-decoration-none text-white">
+					<div className="btn btn-bg-gradient">
+					Login
+					</div>
+				</Link>
 			</div>
 		</div>
 	);

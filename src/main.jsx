@@ -2,18 +2,44 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import Body from "./layout/body/Body";
 import Blog from "./layout/blog/Blog";
+import Auth from "./layout/auth/Auth";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
+import AllToys from "./layout/allToys/AllToys";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Body></Body>
+		element: <Auth></Auth>,
+		children: [
+			{
+				path: "/",
+				element: <Navigate to={"/home"}></Navigate>,
+			},
+			{
+				path: "/login",
+				element: <Login></Login>,
+			},
+			{
+				path: "/register",
+				element: <Register></Register>,
+			},
+		],
+	},
+	{
+		path: "/home",
+		element: <Body></Body>,
 	},
 	{
 		path: "/blog",
-		element: <Blog></Blog>
+		element: <Blog></Blog>,
+	},
+	{
+		path: "/all-toy",
+		element: <AllToys></AllToys>,
 	},
 ]);
 
