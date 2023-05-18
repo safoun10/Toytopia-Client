@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 // import { toast } from "react-toastify";
-// import { AuthContext } from "../../../authProvider/AuthProvider";
-// import { getAuth, signInWithPopup } from "firebase/auth";
+import { getAuth, signInWithPopup } from "firebase/auth";
+import { AuthContext } from "../../provider/AuthProvider";
 
-// const auth = getAuth();
+const auth = getAuth();
 const Login = () => {
-	// const { loginUser, GoogleProvider } = useContext(AuthContext);
+	const { loginUser, GoogleProvider } = useContext(AuthContext);
 
 	const navigate = useNavigate();
 	const location = useLocation();
