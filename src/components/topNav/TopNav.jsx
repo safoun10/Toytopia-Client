@@ -6,8 +6,8 @@ const TopNav = () => {
 	// Home, All Toys, My Toys, Add A Toy, Blogs, and User profile picture.
 	return (
 		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
-			<div className="display-4 text-one">
-				<Link className="text-decoration-none ">ToyTopia</Link>
+			<div className="display-4">
+				<Link className="text-decoration-none text-two">ToyTopia</Link>
 			</div>
 
 			<div className="gap-5 fs-4 d-flex justify-content-center align-items-center">
@@ -52,7 +52,9 @@ const TopNav = () => {
 
 			<div>
 				<div className="btn btn-bg-gradient">
-					<Link className="text-decoration-none text-white">Login</Link>
+					<Link className="text-decoration-none text-white">
+						Login
+					</Link>
 				</div>
 			</div>
 		</div>

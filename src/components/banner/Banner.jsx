@@ -14,8 +14,9 @@ import "swiper/css/bundle";
 
 const Banner = () => {
 	return (
-		<div>
-			<Swiper className="pt-5"
+		<div className="mx-auto" style={{ maxWidth: "1200px" }}>
+			<Swiper
+				className="d-flex flex-column justify-content-center align-items-center"
 				modules={[
 					Navigation,
 					Autoplay,
@@ -31,7 +32,6 @@ const Banner = () => {
 				spaceBetween={0}
 				loop={true}
 				slidesPerView={1}
-				navigation={true}
 				autoplay={{
 					delay: 5000,
 					disableOnInteraction: false,
@@ -39,61 +39,45 @@ const Banner = () => {
 				pagination={{
 					dynamicBullets: true,
 				}}
-				// onSwiper={(swiper) => console.log(swiper)}
-				// onSlideChange={() => console.log("slide change")}
 			>
-				<SwiperSlide className="display-4 text-center">
-					<div>
-						<div className="display-1">slide 1</div>
-						<div>this is slide one</div>
-						<div>some content</div>
-						<div>some more content</div>
-						<div>some extra content</div>
+				<SwiperSlide className="display-1 row d-flex align-items-center">
+					<div className="col-lg-6 col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">ToyTopia</div>
+						<div className="text-round fs-3 px-2 fw-bold">
+							Where Imagination Takes Flight! 😍😇💕
+						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="display-4 text-center">
-					<div>
-						<div className="display-1">slide 2</div>
-						<div>this is slide one</div>
-						<div>some content</div>
-						<div>some more content</div>
-						<div>some extra content</div>
+				<SwiperSlide className="display-1 row d-flex align-items-center">
+					<div className="col-lg-6 col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">ToyTopia 2</div>
+						<div className="text-round fs-3 px-2 fw-bold">
+							Where Imagination Takes Flight! 😍😇💕
+						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="display-4 text-center">
-					<div>
-						<div className="display-1">slide 1</div>
-						<div>this is slide one</div>
-						<div>some content</div>
-						<div>some more content</div>
-						<div>some extra content</div>
+				<SwiperSlide className="display-1 row d-flex align-items-center">
+					<div className="col-lg-6 col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">ToyTopia 3</div>
+						<div className="text-round fs-3 px-2 fw-bold">
+							Where Imagination Takes Flight! 😍😇💕
+						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="display-4 text-center">
-					<div>
-						<div className="display-1">slide 2</div>
-						<div>this is slide one</div>
-						<div>some content</div>
-						<div>some more content</div>
-						<div>some extra content</div>
+				<SwiperSlide className="display-1 row d-flex align-items-center">
+					<div className="col-lg-6 col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">ToyTopia 4</div>
+						<div className="text-round fs-3 px-2 fw-bold">
+							Where Imagination Takes Flight! 😍😇💕
+						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="display-4 text-center">
-					<div>
-						<div className="display-1">slide 1</div>
-						<div>this is slide one</div>
-						<div>some content</div>
-						<div>some more content</div>
-						<div>some extra content</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className="display-4 text-center">
-					<div>
-						<div className="display-1">slide 2</div>
-						<div>this is slide one</div>
-						<div>some content</div>
-						<div>some more content</div>
-						<div>some extra content</div>
+				<SwiperSlide className="display-1 row d-flex align-items-center">
+					<div className="col-lg-6 col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">ToyTopia 5</div>
+						<div className="text-round fs-3 px-2 fw-bold">
+							Where Imagination Takes Flight! 😍😇💕
+						</div>
 					</div>
 				</SwiperSlide>
 			</Swiper>

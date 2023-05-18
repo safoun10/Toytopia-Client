@@ -9,6 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --color-zero: #2b2b2bd8;
   --color-one: #645CBB;
   --color-two: #A084DC;
   --color-three: #BFACE2;
@@ -33,6 +34,10 @@ body {
 
 .text-round {
   font-family: 'Lato', sans-serif !important;
+}
+
+.text-zero {
+  color: var(--color-zero) !important;
 }
 
 .text-one {
