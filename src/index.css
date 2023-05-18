@@ -3,11 +3,6 @@
 
 
 :root {
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: rgba(0, 0, 0, 0.83);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +12,7 @@
   --color-one: #645CBB;
   --color-two: #A084DC;
   --color-three: #BFACE2;
-  --color-four: #EBC7E6;
+  --color-four: #ebc7e6;
 }
 
 a {
@@ -30,14 +25,14 @@ a:hover {
 }
 
 body {
-  font-family: 'Lato', sans-serif !important;
+  font-family: 'Fredoka', sans-serif !important;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
 .text-round {
-  font-family: 'Fredoka', sans-serif !important;
+  font-family: 'Lato', sans-serif !important;
 }
 
 .text-one {
@@ -56,7 +51,7 @@ body {
   color: var(--color-four) !important;
 }
 
-.bg-gradient {
-  background: rgb(100, 92, 187);
+/* .bg-gradient {
+  background: rgb(100, 92, 187) !important;
   background: linear-gradient(90deg, rgba(100, 92, 187, 1) 0%, rgba(235, 199, 230, 1) 100%) !important;
-}
+} */

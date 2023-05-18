@@ -1,14 +1,19 @@
-import React from 'react';
-import Banner from '../../components/banner/Banner';
-import "./Body.css"
+import React from "react";
+import Banner from "../../components/banner/Banner";
+import "./Body.css";
+import TopNav from "../../components/topNav/TopNav";
 
 const Body = () => {
-    return (
+	return (
 		<div>
-            <div></div>
-			{/* <div className="bg-banner">
-				<Banner></Banner>
-			</div> */}
+			<div className="bg-home-top">
+				<div>
+					<TopNav></TopNav>
+				</div>
+				<div>
+					<Banner></Banner>
+				</div>
+			</div>
 		</div>
 	);
 };

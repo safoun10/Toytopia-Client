@@ -1,0 +1,8 @@
+.btn-bg-gradient {
+    background: rgb(100, 92, 187) !important;
+    background: linear-gradient(90deg, rgba(100, 92, 187, 1) 0%, rgba(235, 199, 230, 1) 100%) !important;
+    border: none;
+    color: white;
+    font-size: 25px;
+    padding: 10px 50px;
+}
