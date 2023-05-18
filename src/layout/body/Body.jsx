@@ -15,7 +15,7 @@ const Body = () => {
 					<Banner></Banner>
 				</div>
 			</div>
-			<div className="bg-home-2">
+			<div className="bg-home-2 mt-4 py-2">
 				<ToysForKids></ToysForKids>
 			</div>
 		</div>

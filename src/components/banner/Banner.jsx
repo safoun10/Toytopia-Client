@@ -41,7 +41,10 @@ const Banner = () => {
 				}}
 			>
 				<SwiperSlide className="display-1 row d-flex align-items-center">
-					<div className="col-lg-6 col-11 mx-auto ps-5">
+					<div
+						data-aos="zoom-in"
+						className="col-lg-6 col-11 mx-auto ps-5"
+					>
 						<div className="text-zero fw-bold pb-3">ToyTopia</div>
 						<div className="text-round fs-3 px-2 fw-bold">
 							Where Imagination Takes Flight! 😍😇💕

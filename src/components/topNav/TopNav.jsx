@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./TopNav.css";
+import { BsFlower1 } from "react-icons/bs";
 
 const TopNav = () => {
 	// Home, All Toys, My Toys, Add A Toy, Blogs, and User profile picture.
 	return (
 		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
 			<div className="display-4">
-				<Link to={"/"} className="text-decoration-none text-two">ToyTopia</Link>
+				<Link to={"/"} className="text-decoration-none text-two d-flex">
+					<div className="me-2"><BsFlower1></BsFlower1></div>
+					<div>ToyTopia</div>
+				</Link>
 			</div>
 
 			<div className="gap-5 fs-4 d-flex justify-content-center align-items-center">
