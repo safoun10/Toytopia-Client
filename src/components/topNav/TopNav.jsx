@@ -7,7 +7,7 @@ const TopNav = () => {
 	return (
 		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
 			<div className="display-4">
-				<Link className="text-decoration-none text-two">ToyTopia</Link>
+				<Link to={"/"} className="text-decoration-none text-two">ToyTopia</Link>
 			</div>
 
 			<div className="gap-5 fs-4 d-flex justify-content-center align-items-center">

@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../../components/banner/Banner";
 import "./Body.css";
 import TopNav from "../../components/topNav/TopNav";
+import ToysForKids from "../../components/toysForKids/ToysForKids";
 
 const Body = () => {
 	return (
@@ -13,6 +14,9 @@ const Body = () => {
 				<div>
 					<Banner></Banner>
 				</div>
+			</div>
+			<div className="bg-home-2">
+				<ToysForKids></ToysForKids>
 			</div>
 		</div>
 	);
