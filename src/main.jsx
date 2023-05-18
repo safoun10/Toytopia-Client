@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Body from "./layout/body/Body";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <div className="text-round text-one">Hello world!</div>,
+		element: <Body></Body>
 	},
 ]);
 
