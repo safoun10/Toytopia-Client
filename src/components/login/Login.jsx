@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "../../provider/AuthProvider";
 
@@ -22,24 +22,23 @@ const Login = () => {
 
 		loginUser(email, password)
 			.then((res) => {
-				// toast("Okaeri misutā !!");
-				// toast("Welcome Back !!");
+				toast("Welcome Back !!");
 				form.reset();
 				navigate(from, { replace: true });
 			})
 			.catch((error) => {
-				// toast.error(error.message);
+				toast.error(error.message);
 			});
 	};
 
 	const handleGoogleSignIn = () => {
 		signInWithPopup(auth, GoogleProvider)
 			.then(() => {
-				// toast("You have successfully signed in with Google !!");
+				toast("You have successfully signed in with Google !!");
 				navigate(from, { replace: true });
 			})
 			.catch((err) => {
-				// toast.error(err.message);
+				toast.error(err.message);
 			});
 	};
 

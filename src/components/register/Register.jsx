@@ -1,17 +1,18 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
-	// const [err, setErr] = useState("");
+	const [err, setErr] = useState("");
 
 	const navigate = useNavigate();
 
-	// const errorPop = (message) => {
-	// 	toast.error(message);
-	// };
+	const errorPop = (message) => {
+		toast.error(message);
+	};
 
 	const handleRegister = (event) => {
 		event.preventDefault();
@@ -23,22 +24,20 @@ const Register = () => {
 		const password = form.password.value;
 
 		if (password.length < 6) {
-			// setErr("Password must be 6 characters or more ");
-			// toast.error(err);
+			setErr("Password must be 6 characters or more ");
+			toast.error(err);
 			return;
 		} else {
 			createUser(email, password)
 				.then((res) => {
-					// toast("Arigato gozaimasu !!");
-					// toast("Account created successfully");
+					toast("Account created successfully");
 					form.reset();
 					navigate("/home");
 				})
 				.catch((error) => {
-					// setErr(error.message);
-					// const errorMessage = err;
-					// errorPop(err);
-					console.log(error.message);
+					setErr(error.message);
+					const errorMessage = err;
+					errorPop(err);
 				});
 		}
 	};
