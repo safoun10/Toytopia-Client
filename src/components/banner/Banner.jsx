@@ -35,7 +35,7 @@ const Banner = () => {
 				loop={false}
 				slidesPerView={1}
 				autoplay={{
-					delay: 12000,
+					delay: 22000,
 					disableOnInteraction: false,
 				}}
 				pagination={{
@@ -59,6 +59,8 @@ const Banner = () => {
 									1000,
 									"Where the Perfect Toy Awaits !! 😍",
 									1000,
+									"Swipe right 👀 -->",
+									1000
 								]}
 								wrapper="span"
 								speed={50}
