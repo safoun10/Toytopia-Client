@@ -18,6 +18,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import "react-tooltip/dist/react-tooltip.css";
+import ErrPage from "./components/errPage/ErrPage";
 
 const router = createBrowserRouter([
 	{
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
 	{
 		path: "/all-toy",
 		element: <AllToys></AllToys>,
+	},
+	{
+		path: "*",
+		element: <ErrPage></ErrPage>,
 	},
 ]);
 

@@ -43,7 +43,11 @@ const ToysForKids = () => {
 					</div>
 				</div>
 				<div className="col-11 col-md-6 mx-auto p-3">
-					<div data-aos="zoom-in" data-aos-duration="1000">
+					<div
+						data-aos="zoom-in"
+						data-aos-duration="1000"
+						data-aos-delay="500"
+					>
 						<img
 							className="img-fluid rounded-3 img-border-custom"
 							src="https://media.istockphoto.com/id/1046430538/photo/a-young-boss-in-the-car.jpg?s=612x612&w=0&k=20&c=DhjTrKTcu_hNpeuvsuyUtq6wG9Sj8urj7o1_Unyn624="
@@ -58,7 +62,6 @@ const ToysForKids = () => {
 					<div
 						data-aos="zoom-out"
 						data-aos-duration="1000"
-						data-aos-delay="500"
 					>
 						<img
 							className="img-fluid rounded-3 img-border-custom"
