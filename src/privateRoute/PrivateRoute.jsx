@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { BallTriangle, TailSpin, Watch } from "react-loader-spinner";
 
 const PrivateRoute = ({children}) => {
 	const { user, loading } = useContext(AuthContext);
@@ -15,7 +16,16 @@ const PrivateRoute = ({children}) => {
 					alignItems: "center",
 				}}
 			>
-				loading....
+				<TailSpin
+					height="200"
+					width="200"
+					// radius="48"
+					color="#A084DC"
+					ariaLabel="watch-loading"
+					wrapperStyle={{}}
+					wrapperClassName=""
+					visible={true}
+				/>
 			</div>
 		);
 	}

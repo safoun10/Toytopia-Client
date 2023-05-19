@@ -4,13 +4,28 @@ import "./TopNav.css";
 import { BsFlower1 } from "react-icons/bs";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const TopNav = () => {
 	const { user, logout } = useContext(AuthContext);
 
 	const signOut = () => {
-		logout()
-		.then(() => toast("Signed Out from toytopia"))
+		Swal.fire({
+			title: "Are you sure?",
+			text: "Do you really want to log out from this site ?",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#3085d6",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "Yes",
+		}).then((result) => {
+			if (result.isConfirmed) {
+				logout();
+				toast("Signed Out !");
+			}else{
+				toast("😍💕" , {autoClose: 500 , hideProgressBar: true , position: "top-center"});
+			}
+		});
 	};
 
 	return (
