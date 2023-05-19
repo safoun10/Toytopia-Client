@@ -11,6 +11,8 @@ import {
 } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
+import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
 	return (
@@ -30,10 +32,10 @@ const Banner = () => {
 					slideShadows: false,
 				}}
 				spaceBetween={0}
-				loop={true}
+				loop={false}
 				slidesPerView={1}
 				autoplay={{
-					delay: 5000,
+					delay: 12000,
 					disableOnInteraction: false,
 				}}
 				pagination={{
@@ -41,45 +43,52 @@ const Banner = () => {
 				}}
 			>
 				<SwiperSlide className="display-1 row d-flex align-items-center">
-					<div
-						data-aos="zoom-in"
-						className="col-lg-6 col-11 mx-auto ps-5"
-					>
-						<div className="text-zero fw-bold pb-3">ToyTopia</div>
-						<div className="text-round fs-3 px-2 fw-bold">
-							Where Imagination Takes Flight! 😍😇💕
+					<div data-aos="zoom-in" className="col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">
+							ToyTopia <sup className="display-4">✨</sup>
+						</div>
+						<div className="text-secondary fs-5 px-2">
+							<TypeAnimation
+								sequence={[
+									1000,
+									"Where Imagination Takes Flight! 😍😇💕",
+									1000,
+									"Where Sparkle of Joy and Adventure Begins !! 😚",
+									1000,
+									"Where Magic Comes Alive !! 😮😃",
+									1000,
+									"Where the Perfect Toy Awaits !! 😍",
+									1000,
+								]}
+								wrapper="span"
+								speed={50}
+								cursor={true}
+								repeat={Infinity}
+								style={{
+									fontSize: "2em",
+									display: "inline-block",
+								}}
+							/>
 						</div>
 					</div>
 				</SwiperSlide>
-				<SwiperSlide className="display-1 row d-flex align-items-center">
-					<div className="col-lg-6 col-11 mx-auto ps-5">
-						<div className="text-zero fw-bold pb-3">ToyTopia 2</div>
-						<div className="text-round fs-3 px-2 fw-bold">
-							Where Imagination Takes Flight! 😍😇💕
+				<SwiperSlide className="display-1 row d-flex align-items-center ms-2">
+					<div className="col-11 mx-auto ps-5">
+						<div className="text-zero fw-bold pb-3">
+							ToyTopia <sup className="display-4">✨</sup>
 						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className="display-1 row d-flex align-items-center">
-					<div className="col-lg-6 col-11 mx-auto ps-5">
-						<div className="text-zero fw-bold pb-3">ToyTopia 3</div>
-						<div className="text-round fs-3 px-2 fw-bold">
-							Where Imagination Takes Flight! 😍😇💕
+						<div className="fs-5 text-zero">
+							Behold, wanderers of wonder! Behold the majesty of
+							Toytopia's extraordinary toy collection, where
+							dreams dance and playtime reigns supreme. Immerse
+							yourself in a magical realm, where toys come alive,
+							enchantment fills the air, and pure joy awaits your
+							every discovery. Enter, and be forever spellbound!
 						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className="display-1 row d-flex align-items-center">
-					<div className="col-lg-6 col-11 mx-auto ps-5">
-						<div className="text-zero fw-bold pb-3">ToyTopia 4</div>
-						<div className="text-round fs-3 px-2 fw-bold">
-							Where Imagination Takes Flight! 😍😇💕
-						</div>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className="display-1 row d-flex align-items-center">
-					<div className="col-lg-6 col-11 mx-auto ps-5">
-						<div className="text-zero fw-bold pb-3">ToyTopia 5</div>
-						<div className="text-round fs-3 px-2 fw-bold">
-							Where Imagination Takes Flight! 😍😇💕
+						<div>
+							<div className="btn btn-explore">
+								<Link className="text-decoration-none text-white">Explore more 👉</Link>
+							</div>
 						</div>
 					</div>
 				</SwiperSlide>
