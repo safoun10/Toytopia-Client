@@ -19,7 +19,7 @@ const Body = () => {
 			<div className="bg-home-2 mt-4 py-2">
 				<ToysForKids></ToysForKids>
 			</div>
-			<div><Gallery></Gallery></div>
+			<div className="mx-auto my-5" style={{maxWidth: "1200px"}}><Gallery></Gallery></div>
 		</div>
 	);
 };
