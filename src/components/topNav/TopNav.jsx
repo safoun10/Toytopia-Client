@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./TopNav.css";
 import { BsFlower1 } from "react-icons/bs";
+import { AuthContext } from "../../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const TopNav = () => {
-	// Home, All Toys, My Toys, Add A Toy, Blogs, and User profile picture.
+	const { user, logout } = useContext(AuthContext);
+
+	const signOut = () => {
+		logout()
+		.then(() => toast("Signed Out from toytopia"))
+	};
+
 	return (
 		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
 			<div className="display-4">
 				<Link to={"/"} className="text-decoration-none text-two d-flex">
-					<div className="me-2"><BsFlower1></BsFlower1></div>
+					<div className="me-2">
+						<BsFlower1></BsFlower1>
+					</div>
 					<div>ToyTopia</div>
 				</Link>
 			</div>
@@ -54,13 +64,24 @@ const TopNav = () => {
 				</div>
 			</div>
 
-			<div>
-				<Link to={"/login"} className="text-decoration-none text-white">
-					<div className="btn btn-bg-gradient">
-					Login
-					</div>
-				</Link>
-			</div>
+			{user ? (
+				<div>
+					<Link className="text-decoration-none text-white">
+						<div onClick={signOut} className="btn btn-bg-gradient">
+							Logout
+						</div>
+					</Link>
+				</div>
+			) : (
+				<div>
+					<Link
+						to={"/login"}
+						className="text-decoration-none text-white"
+					>
+						<div className="btn btn-bg-gradient">Login</div>
+					</Link>
+				</div>
+			)}
 		</div>
 	);
 };

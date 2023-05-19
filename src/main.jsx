@@ -16,6 +16,7 @@ import AllToys from "./layout/allToys/AllToys";
 import AuthProvider from "./provider/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PrivateRoute from "./privateRoute/PrivateRoute"
 
 const router = createBrowserRouter([
 	{
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/blog",
-		element: <Blog></Blog>,
+		element: (
+			<PrivateRoute>
+				<Blog></Blog>
+			</PrivateRoute>
+		),
 	},
 	{
 		path: "/all-toy",
