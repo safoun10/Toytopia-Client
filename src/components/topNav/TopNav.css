@@ -6,3 +6,9 @@
     font-size: 25px;
     padding: 10px 50px;
 }
+
+.profile-img{
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+}

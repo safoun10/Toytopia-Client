@@ -18,6 +18,7 @@ const Body = () => {
 			<div className="bg-home-2 mt-4 py-2">
 				<ToysForKids></ToysForKids>
 			</div>
+			<div>kugvkgviigvi</div>
 		</div>
 	);
 };

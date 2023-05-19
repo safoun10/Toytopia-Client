@@ -1,13 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./TopNav.css";
-import { BsFlower1 } from "react-icons/bs";
+import { BsFlower1, BsPersonCircle } from "react-icons/bs";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip";
 
 const TopNav = () => {
 	const { user, logout } = useContext(AuthContext);
+	const [URL , setURL] = useState("")
+
+	useEffect(()=> {
+		setURL(user?.photoURL);
+	} , [user])
 
 	const signOut = () => {
 		Swal.fire({
@@ -22,8 +28,12 @@ const TopNav = () => {
 			if (result.isConfirmed) {
 				logout();
 				toast("Signed Out !");
-			}else{
-				toast("😍💕" , {autoClose: 500 , hideProgressBar: true , position: "top-center"});
+			} else {
+				toast("😍💕", {
+					autoClose: 500,
+					hideProgressBar: true,
+					position: "top-center",
+				});
 			}
 		});
 	};
@@ -61,26 +71,53 @@ const TopNav = () => {
 						All Toys
 					</Link>
 				</div>
-				<div>
-					<Link
-						to={"/my-toy"}
-						className="text-decoration-none text-two"
-					>
-						My Toys
-					</Link>
-				</div>
-				<div>
-					<Link
-						to={"/add-toy"}
-						className="text-decoration-none text-two"
-					>
-						Add a toy
-					</Link>
-				</div>
+				{user && (
+					<div>
+						<Link
+							to={"/my-toy"}
+							className="text-decoration-none text-two"
+						>
+							My Toys
+						</Link>
+					</div>
+				)}
+				{user && (
+					<div>
+						<Link
+							to={"/add-toy"}
+							className="text-decoration-none text-two"
+						>
+							Add a toy
+						</Link>
+					</div>
+				)}
 			</div>
 
+			<Tooltip id="my-tooltip" />
 			{user ? (
-				<div>
+				<div className="d-flex justify-content-center align-items-center gap-3">
+					{user?.photoURL ? (
+						<div
+							data-tooltip-id="my-tooltip"
+							data-tooltip-content={user.displayName}
+							data-tooltip-place="top"
+						>
+							<img
+								className="profile-img"
+								src={URL}
+								alt="profile_photo"
+							/>
+						</div>
+					) : (
+						<div>
+							<BsPersonCircle
+								data-tooltip-id="my-tooltip"
+								data-tooltip-content={user.email}
+								data-tooltip-place="top"
+								className="display-5 text-zero"
+							></BsPersonCircle>
+						</div>
+					)}
 					<Link className="text-decoration-none text-white">
 						<div onClick={signOut} className="btn btn-bg-gradient">
 							Logout

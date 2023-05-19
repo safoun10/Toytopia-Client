@@ -17,6 +17,7 @@ import AuthProvider from "./provider/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import "react-tooltip/dist/react-tooltip.css";
 
 const router = createBrowserRouter([
 	{
