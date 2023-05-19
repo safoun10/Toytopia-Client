@@ -4,8 +4,10 @@ import "./Body.css";
 import TopNav from "../../components/topNav/TopNav";
 import ToysForKids from "../../components/toysForKids/ToysForKids";
 import Gallery from "../../components/gallery/Gallery";
+import useTitle from "../../components/hooks/useTitle";
 
 const Body = () => {
+	useTitle("Home");
 	return (
 		<div>
 			<div className="bg-home-top">

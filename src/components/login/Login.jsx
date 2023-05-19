@@ -4,9 +4,11 @@ import "./Login.css";
 import { toast } from "react-toastify";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../hooks/useTitle";
 
 const auth = getAuth();
 const Login = () => {
+	useTitle("Login");
 	const { loginUser, GoogleProvider } = useContext(AuthContext);
 
 	const navigate = useNavigate();
