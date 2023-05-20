@@ -1,7 +1,8 @@
 import React from "react";
-import "./SingleToyByCategory.css"
+import "./SingleToyByCategory.css";
 import Rating from "react-rating";
 import { BsStar, BsStarFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const SingleToyByCategory = ({ toy }) => {
 	const {
@@ -45,7 +46,10 @@ const SingleToyByCategory = ({ toy }) => {
 				<div className="fw-bold">
 					Price :<span className="fw-light ms-3"> ${price}</span>
 				</div>
-                <div className="btn btn-details">View Details</div>
+
+				<Link className="text-decoration-none text-white">
+					<div className="btn btn-details">View Details</div>
+				</Link>
 			</div>
 		</div>
 	);
