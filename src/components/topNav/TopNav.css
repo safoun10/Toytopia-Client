@@ -12,3 +12,7 @@
     border-radius: 50%;
     width: 80px;
 }
+
+.active-link{
+    border-bottom: 3px solid black !important;
+}

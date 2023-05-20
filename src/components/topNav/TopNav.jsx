@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./TopNav.css";
 import { BsFlower1, BsPersonCircle } from "react-icons/bs";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -41,54 +41,54 @@ const TopNav = () => {
 	return (
 		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
 			<div className="display-4">
-				<Link to={"/"} className="text-decoration-none text-two d-flex">
+				<NavLink activeClassName="active-link" to={"/"} className="text-decoration-none text-two d-flex">
 					<div className="me-2">
 						<BsFlower1></BsFlower1>
 					</div>
 					<div>ToyTopia</div>
-				</Link>
+				</NavLink>
 			</div>
 
 			<div className="gap-5 fs-4 d-flex justify-content-center align-items-center">
 				<div>
-					<Link to={"/"} className="text-decoration-none text-two">
+					<NavLink activeClassName="active-link" to={"/"} className="text-decoration-none text-two">
 						Home
-					</Link>
+					</NavLink>
 				</div>
 				<div>
-					<Link
+					<NavLink activeClassName="active-link"
 						to={"/blog"}
 						className="text-decoration-none text-two"
 					>
 						Blog
-					</Link>
+					</NavLink>
 				</div>
 				<div>
-					<Link
+					<NavLink activeClassName="active-link"
 						to={"/all-toy"}
 						className="text-decoration-none text-two"
 					>
 						All Toys
-					</Link>
+					</NavLink>
 				</div>
 				{user && (
 					<div>
-						<Link
+						<NavLink activeClassName="active-link"
 							to={"/my-toy"}
 							className="text-decoration-none text-two"
 						>
 							My Toys
-						</Link>
+						</NavLink>
 					</div>
 				)}
 				{user && (
 					<div>
-						<Link
+						<NavLink activeClassName="active-link"
 							to={"/add-toy"}
 							className="text-decoration-none text-two"
 						>
 							Add a toy
-						</Link>
+						</NavLink>
 					</div>
 				)}
 			</div>

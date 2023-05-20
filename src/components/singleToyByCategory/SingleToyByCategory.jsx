@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const SingleToyByCategory = ({ toy }) => {
 	const {
+		_id,
 		photo,
 		toy_name,
 		seller_name,
@@ -43,7 +44,7 @@ const SingleToyByCategory = ({ toy }) => {
 					Price :<span className="fw-light ms-3"> ${price}</span>
 				</div>
 
-				<Link className="text-decoration-none text-white">
+				<Link  className="text-decoration-none text-white">
 					<div className="btn btn-details">View Details</div>
 				</Link>
 			</div>

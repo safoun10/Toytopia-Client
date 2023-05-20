@@ -14,7 +14,7 @@ const Body = () => {
 		<div>
 			<div className="bg-home-top">
 				<div>
-					{/* <TopNav></TopNav> */}
+					<TopNav></TopNav>
 				</div>
 				<div>
 					<Banner></Banner>
