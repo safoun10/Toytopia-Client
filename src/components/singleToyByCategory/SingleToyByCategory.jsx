@@ -9,12 +9,8 @@ const SingleToyByCategory = ({ toy }) => {
 		photo,
 		toy_name,
 		seller_name,
-		seller_email,
 		price,
 		rating,
-		quantity,
-		category,
-		description,
 	} = toy;
 
 	return (

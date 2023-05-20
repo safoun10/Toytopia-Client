@@ -14,7 +14,7 @@ const Body = () => {
 		<div>
 			<div className="bg-home-top">
 				<div>
-					<TopNav></TopNav>
+					{/* <TopNav></TopNav> */}
 				</div>
 				<div>
 					<Banner></Banner>
@@ -29,7 +29,7 @@ const Body = () => {
 			<div className="mx-auto my-5" style={{maxWidth : "1200px"}}>
 				<ToysByCategory></ToysByCategory>
 			</div>
-			<div>
+			<div className="bg-footer">
 				<Footer></Footer>
 			</div>
 		</div>
