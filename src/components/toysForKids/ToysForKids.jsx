@@ -17,7 +17,7 @@ const ToysForKids = () => {
 			</div>
 			<div className="row">
 				<div className="col-11 col-md-6 mx-auto p-3">
-					<div data-aos="fade-up-right" data-aos-duration="1000">
+					<div data-aos="fade-up" data-aos-duration="1000">
 						<img
 							className="img-fluid rounded-3 img-border-custom"
 							src="https://media.istockphoto.com/id/1044927526/photo/adorable-little-child-playing-with-blue-toy-car-at-home.jpg?s=612x612&w=0&k=20&c=dNv7Njhu04nAvg5WbbXJPUwhllEmV6rKIAVhTWIE0eQ="
@@ -30,7 +30,7 @@ const ToysForKids = () => {
 				</div>
 				<div className="col-11 col-md-6 mx-auto p-3">
 					<div
-						data-aos="fade-up-left"
+						data-aos="fade-up"
 						data-aos-duration="1000"
 						data-aos-delay="500"
 					>
@@ -46,7 +46,7 @@ const ToysForKids = () => {
 				</div>
 				<div className="col-11 col-md-6 mx-auto p-3">
 					<div
-						data-aos="zoom-in"
+						data-aos="fade-up"
 						data-aos-duration="1000"
 						data-aos-delay="500"
 					>
@@ -61,7 +61,7 @@ const ToysForKids = () => {
 					</div>
 				</div>
 				<div className="col-11 col-md-6 mx-auto p-3">
-					<div data-aos="zoom-out" data-aos-duration="1000">
+					<div data-aos="fade-up" data-aos-duration="1000">
 						<img
 							className="img-fluid rounded-3 img-border-custom"
 							src="https://media.istockphoto.com/id/1045975302/photo/smiling-kid-father-leisure-time-man-smile.jpg?s=612x612&w=0&k=20&c=4L8zp6uf6YEhCbqA-nNM76FYTEvo7AjQlsL6M1_g0-M="
