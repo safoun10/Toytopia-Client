@@ -8,4 +8,5 @@
     background: linear-gradient(90deg, rgba(100, 92, 187, 1) 0%, rgba(235, 199, 230, 1) 100%) !important;
     border: none;
     padding: 10px 50px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.745);
 }

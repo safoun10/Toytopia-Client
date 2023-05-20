@@ -89,7 +89,7 @@ const Banner = () => {
 						</div>
 						<div>
 							<div className="btn btn-explore">
-								<Link className="text-decoration-none text-white">Explore more 👉</Link>
+								<Link className="text-decoration-none text-white fs-5">Explore more 👉</Link>
 							</div>
 						</div>
 					</div>
