@@ -9,13 +9,13 @@ const Gallery = () => {
 	const [photos_two, setPhotos_two] = useState([]);
 
 	useEffect(() => {
-		fetch("gallery1.json")
+		fetch("http://localhost:5000/gallery-one")
 			.then((res) => res.json())
 			.then((data) => setPhotos_one(data));
 	}, []);
 
 	useEffect(() => {
-		fetch("gallery2.json")
+		fetch("http://localhost:5000/gallery-two")
 			.then((res) => res.json())
 			.then((data) => setPhotos_two(data));
 	}, []);
