@@ -15,7 +15,7 @@ const ToysForKids = () => {
 				</span>
 				<span className="text-zero text-shadow-two">with kids</span>
 			</div>
-			<div className="row">
+			<div className="row w-100 mx-auto">
 				<div className="col-11 col-md-6 mx-auto p-3">
 					<div data-aos="fade-up" data-aos-duration="1000">
 						<img

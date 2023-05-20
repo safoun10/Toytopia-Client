@@ -1,6 +1,7 @@
 import React from 'react';
 import TopNav from '../../components/topNav/TopNav';
 import useTitle from '../../components/hooks/useTitle';
+import Footer from '../../components/footer/Footer';
 
 const Blog = () => {
     useTitle("Blog")
@@ -8,6 +9,7 @@ const Blog = () => {
         <div>
             <TopNav></TopNav>
             blogs .......
+            <Footer></Footer>
         </div>
     );
 };

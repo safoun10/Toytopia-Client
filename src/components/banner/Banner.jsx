@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
 	return (
-		<div className="mx-auto" style={{ maxWidth: "1200px" }}>
+		<div className="mx-auto d-flex" style={{ maxWidth: "1200px" }}>
 			<Swiper
 				className="d-flex flex-column justify-content-center align-items-center"
 				modules={[
