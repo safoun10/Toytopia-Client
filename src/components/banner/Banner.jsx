@@ -47,7 +47,7 @@ const Banner = () => {
 						<div className="text-zero fw-bold pb-3">
 							ToyTopia <sup className="display-4">✨</sup>
 						</div>
-						<div className="text-secondary fs-5 px-2">
+						<div className="text-secondary fs-5 px-2 text-responsive">
 							<TypeAnimation
 								sequence={[
 									1000,
@@ -79,7 +79,7 @@ const Banner = () => {
 						<div className="text-zero fw-bold pb-3">
 							ToyTopia <sup className="display-4">✨</sup>
 						</div>
-						<div className="fs-5 text-zero">
+						<div className="fs-5 text-zero text-responsive-2">
 							Behold, wanderers of wonder! Behold the majesty of
 							Toytopia's extraordinary toy collection, where
 							dreams dance and playtime reigns supreme. Immerse

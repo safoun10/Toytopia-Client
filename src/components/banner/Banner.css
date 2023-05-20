@@ -10,3 +10,18 @@
     padding: 10px 50px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.745);
 }
+
+@media only screen and (max-width: 500px) {
+    .text-responsive {
+        font-size: 10px !important;
+    }
+
+    .text-responsive-2 {
+        font-size: 18px !important;
+        margin-bottom: 10px;
+    }
+
+    .btn-explore {
+        padding: 10px 40px;
+    }
+}

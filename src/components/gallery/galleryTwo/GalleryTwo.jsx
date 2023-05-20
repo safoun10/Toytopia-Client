@@ -5,7 +5,7 @@ const GalleryTwo = ({ photo }) => {
 		<div>
 			<div>
 				<img
-					className="mx-3 rounded-4 img-fluid"
+					className="mx-3 rounded-4 img-fluid img-responsive"
 					src={photo.url}
 					alt="photo"
 				/>

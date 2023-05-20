@@ -10,7 +10,7 @@ const ToysForKids = () => {
 	return (
 		<div style={{ maxWidth: "1200px" }} className="mx-auto pb-5">
 			<div className="display-4 text-center py-5 text-white">
-				<span className="text-shadow">
+				<span className="text-shadow px-3">
 					We design toys not just for kids <br /> but{" "}
 				</span>
 				<span className="text-zero text-shadow-two">with kids</span>
