@@ -1,13 +1,54 @@
-import React from 'react';
+import React from "react";
+import "./SingleToyByCategory.css"
+import Rating from "react-rating";
+import { BsStar, BsStarFill } from "react-icons/bs";
 
-const SingleToyByCategory = ({toy}) => {
-    return (
-        <div>
-            <dir>
-                {toy.toy_name}
-            </dir>
-        </div>
-    );
+const SingleToyByCategory = ({ toy }) => {
+	const {
+		photo,
+		toy_name,
+		seller_name,
+		seller_email,
+		price,
+		rating,
+		quantity,
+		category,
+		description,
+	} = toy;
+
+	return (
+		<div className="row align-items-center card-toy p-5 rounded-3 mx-3">
+			<div className="col-11 col-md-6 mx-auto">
+				<div>
+					<img
+						className="img-fluid rounded-3"
+						src={photo}
+						alt="toy_photo"
+					/>
+					<div className="d-flex justify-content-end align-items-center mx-2">
+						<Rating
+							initialRating={rating}
+							emptySymbol={<BsStar></BsStar>}
+							fullSymbol={<BsStarFill></BsStarFill>}
+							readonly
+							fractions={5}
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="col-11 col-md-6 mx-auto">
+				<div className="display-5">{toy_name}</div>
+				<div className="fw-bold">
+					Seller :{" "}
+					<span className="fw-light ms-2">{seller_name}</span>
+				</div>
+				<div className="fw-bold">
+					Price :<span className="fw-light ms-3"> ${price}</span>
+				</div>
+                <div className="btn btn-details">View Details</div>
+			</div>
+		</div>
+	);
 };
 
 export default SingleToyByCategory;

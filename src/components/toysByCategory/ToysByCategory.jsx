@@ -21,8 +21,6 @@ const ToysByCategory = () => {
 			});
 	}, [category]);
 
-    console.log(toys);
-
     return (
 		<div>
 			<div className="display-2 mb-5 text-center">Buy our toys !!</div>
@@ -46,7 +44,7 @@ const ToysByCategory = () => {
 					Emergency cars
 				</div>
 			</div>
-			<div>
+			<div className="my-5 d-flex flex-column gap-3">
                 {toys.map(toy => <SingleToyByCategory key={toy?.id} toy={toy}></SingleToyByCategory>)}
             </div>
 		</div>
