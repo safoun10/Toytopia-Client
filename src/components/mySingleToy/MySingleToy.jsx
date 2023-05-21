@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineDelete} from "react-icons/ai";
 
 const MySingleToy = ({toy}) => {
-    const { seller_name, toy_name, category, price, rating, quantity } =
+    const { seller_name, toy_name, category, price, rating, quantity , _id} =
 		toy;
     return (
 		<>
@@ -15,15 +15,15 @@ const MySingleToy = ({toy}) => {
 				<td>{rating}</td>
 				<td>{quantity}</td>
 				<td>
-					<Link
-						className="text-decoration-none"
-					>
+					<Link to={`/update/${_id}`} className="text-decoration-none">
 						<div className="btn btn-details-chart text-zero">
 							Update
 						</div>
 					</Link>
 				</td>
-				<td><AiOutlineDelete className='fs-2 text-zero'></AiOutlineDelete></td>
+				<td>
+					<AiOutlineDelete className="fs-2 text-zero"></AiOutlineDelete>
+				</td>
 			</tr>
 		</>
 	);
