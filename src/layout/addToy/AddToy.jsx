@@ -160,7 +160,7 @@ const AddToy = () => {
 								</div>
 								<div>
 									<select
-										class="input-field form-select-lg rounded-0"
+										className="input-field form-select-lg rounded-0"
 										name="rating"
 										defaultValue={"5"}
 									>

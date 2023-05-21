@@ -81,7 +81,7 @@ const UpdateToy = () => {
 					toast("updated successfully !!");
 				}
 			});
-		navigate("/my-toy");
+		navigate("/all-toy");
 	};
 
 	return (
