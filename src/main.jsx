@@ -22,6 +22,7 @@ import ErrPage from "./components/errPage/ErrPage";
 import MyToys from "./layout/myToys/MyToys";
 import AddToy from "./layout/addToy/AddToy";
 import Details from "./layout/details/Details";
+import UpdateToy from "./layout/updateToy/UpdateToy";
 
 const router = createBrowserRouter([
 	{
@@ -67,6 +68,14 @@ const router = createBrowserRouter([
 		element: (
 			<PrivateRoute>
 				<AddToy></AddToy>
+			</PrivateRoute>
+		),
+	},
+	{
+		path: "/update",
+		element: (
+			<PrivateRoute>
+				<UpdateToy></UpdateToy>
 			</PrivateRoute>
 		),
 	},

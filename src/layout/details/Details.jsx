@@ -8,7 +8,6 @@ import { BsStar, BsStarFill } from "react-icons/bs";
 
 const Details = () => {
 	useTitle("Toy Details");
-	const ID = useParams();
 	const toy = useLoaderData();
 
 	console.log(toy);

@@ -31,7 +31,7 @@ const TopNav = () => {
 				logout();
 				toast("Signed Out !");
 			} else {
-				toast("😍💕", {
+				toast("Thanks for not leaving us😍💕", {
 					autoClose: 500,
 					hideProgressBar: true,
 					position: "top-center",
