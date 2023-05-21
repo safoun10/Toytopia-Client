@@ -2,7 +2,7 @@
 Live site link : [Toytopia | Where imagination takes flight 😍](https://toytopia-safoun.web.app/home)
 <hr/>
 
-### Some of the best features of my site is 😃
+## Some of the best features of my site is 😃
 
 - Visual Appealing: Focused on an aesthetically pleasing design with pleasing color contrast, proper alignment, and spacing.
 - Navbar and Footer: Consistent presence of a navigation bar and footer across all pages, providing easy navigation and relevant information.
