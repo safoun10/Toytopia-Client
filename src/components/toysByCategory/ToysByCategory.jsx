@@ -38,14 +38,14 @@ const ToysByCategory = () => {
 					Trucks
 				</div>
 				<div
-					onClick={() => handleCategory("Emergency Cars")}
+					onClick={() => handleCategory("Emergency Vehicles")}
 					className="btn col-md-4 col-11 mx-auto btn-category fs-5 category-3"
 				>
-					Emergency cars
+					Emergency Vehicles
 				</div>
 			</div>
 			<div className="my-5 d-flex flex-column gap-3">
-                {toys.map(toy => <SingleToyByCategory key={toy?.id} toy={toy}></SingleToyByCategory>)}
+                {toys.map(toy => <SingleToyByCategory key={toy?._id} toy={toy}></SingleToyByCategory>)}
             </div>
 		</div>
 	);

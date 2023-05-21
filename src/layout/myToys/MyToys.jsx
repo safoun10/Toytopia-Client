@@ -15,7 +15,7 @@ const MyToys = () => {
 		fetch("http://localhost:5000/all-toys")
 			.then((res) => res.json())
 			.then((data) => {
-				const my_toy = data.filter((toy) => toy.email === user.email);
+				const my_toy = data.filter((toy) => toy.seller_email === user.email);
 				setToys(my_toy);
 			});
 	}, []);

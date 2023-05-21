@@ -15,7 +15,7 @@ const Details = () => {
 	const {
 		photo,
 		toy_name,
-		email,
+		seller_email,
 		seller_name,
 		price,
 		rating,
@@ -47,7 +47,7 @@ const Details = () => {
 					<div className="display-2">{toy_name}</div>
 					<div className="text-end me-3">
 						<div className="display-6">{seller_name}</div>
-						<div>{email}</div>
+						<div>{seller_email}</div>
                         <div>${price}</div>
                         <div>{quantity} pieces available</div>
                         <hr />

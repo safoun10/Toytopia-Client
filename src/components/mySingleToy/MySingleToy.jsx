@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineDelete} from "react-icons/ai";
 
 const MySingleToy = ({toy}) => {
-    const { seller_name, toy_name, category, price, rating, quantity, _id } =
+    const { seller_name, toy_name, category, price, rating, quantity } =
 		toy;
     return (
 		<>
