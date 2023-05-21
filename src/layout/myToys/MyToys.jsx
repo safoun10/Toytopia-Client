@@ -19,8 +19,6 @@ const MyToys = () => {
 				setToys(my_toy);
 			});
 	}, []);
-
-	console.log(toys);
 	return (
 		<div>
 			<TopNav></TopNav>

@@ -4,13 +4,14 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import TopNav from "../../components/topNav/TopNav";
 import Footer from "../../components/footer/Footer";
+import { toast } from "react-toastify";
 
 const UpdateToy = () => {
 	useTitle("Update a toy");
 
 	const toy = useLoaderData();
-	console.log(toy);
 	const {
+		_id,
 		toy_name,
 		photo,
 		category,
@@ -30,15 +31,15 @@ const UpdateToy = () => {
 		event.preventDefault();
 
 		const form = event.target;
-		const toy_name = form.toy_name.value;
-		const photo = form.url.value;
-		const category = form.category.value;
-		const seller_name = form.seller_name.value;
-		const seller_email = form.seller_email.value;
-		const price = form.price.value;
-		const rating = form.rating.value;
-		const quantity = form.quantity.value;
-		const description = form.details.value;
+		const toy_name_updated = form.toy_name.value;
+		const photo_updated = form.url.value;
+		const category_updated = form.category.value;
+		const seller_name_updated = form.seller_name.value;
+		const seller_email_updated = form.seller_email.value;
+		const price_updated = form.price.value;
+		const rating_updated = form.rating.value;
+		const quantity_updated = form.quantity.value;
+		const description_updated = form.details.value;
 
 		const updateToy = {
 			toy_name,
@@ -52,18 +53,35 @@ const UpdateToy = () => {
 			description,
 		};
 
-		// fetch("http://localhost:5000/all-toys", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"content-type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(newToy),
-		// })
-		// 	.then((res) => res.json())
-		// 	.then((data) => {
-		// 		console.log(data);
-		// 	});
-		// navigate("/");
+		const AfterUpdatedToy = {
+			toy_name: toy_name_updated,
+			photo: photo_updated,
+			category: category_updated,
+			seller_name: seller_name_updated,
+			seller_email: seller_email_updated,
+			price: price_updated,
+			rating: rating_updated,
+			quantity: quantity_updated,
+			description: description_updated,
+		};
+
+		fetch(`http://localhost:5000/all-toys/${_id}`, {
+			method: "PATCH",
+			headers: {
+				"content-type": "application/json",
+			},
+			body: JSON.stringify(AfterUpdatedToy),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data?.modifiedCount);
+				if (data?.modifiedCount <= 0) {
+					toast("You didn't update any data 😐");
+				} else {
+					toast("updated successfully !!");
+				}
+			});
+		navigate("/my-toy");
 	};
 
 	return (
@@ -91,7 +109,7 @@ const UpdateToy = () => {
 											type="text"
 											name="toy_name"
 											id="text"
-                                            defaultValue={toy_name}
+											defaultValue={toy_name}
 											placeholder="Please enter toy name here"
 											required
 										/>
@@ -107,7 +125,7 @@ const UpdateToy = () => {
 											type="url"
 											name="url"
 											id="url"
-                                            defaultValue={photo}
+											defaultValue={photo}
 											placeholder="Please enter toy photo url here"
 											required
 										/>
@@ -120,7 +138,7 @@ const UpdateToy = () => {
 									<select
 										class="input-field form-select-lg rounded-0"
 										name="category"
-                                        defaultValue={category}
+										defaultValue={category}
 									>
 										<option value="Racing Cars">
 											Racing Cars
@@ -141,7 +159,7 @@ const UpdateToy = () => {
 											type="text"
 											name="seller_name"
 											id="text"
-                                            defaultValue={seller_name}
+											defaultValue={seller_name}
 											placeholder="Please enter seller name here"
 											required
 										/>
@@ -172,7 +190,7 @@ const UpdateToy = () => {
 											type="number"
 											name="price"
 											id="number"
-                                            defaultValue={price}
+											defaultValue={price}
 											placeholder="Please enter toy price here"
 											required
 										/>
@@ -186,7 +204,7 @@ const UpdateToy = () => {
 										<select
 											class="input-field form-select-lg rounded-0"
 											name="rating"
-                                            defaultValue={rating}
+											defaultValue={rating}
 										>
 											<option value="1">&#9733;</option>
 											<option value="2">
@@ -214,7 +232,7 @@ const UpdateToy = () => {
 											type="number"
 											name="quantity"
 											id="number"
-                                            defaultValue={quantity}
+											defaultValue={quantity}
 											placeholder="Please enter toy quantity here"
 											required
 										/>
@@ -230,7 +248,7 @@ const UpdateToy = () => {
 											type="text"
 											name="details"
 											id="text"
-                                            defaultValue={description}
+											defaultValue={description}
 											placeholder="Please enter toy details here"
 											required
 										/>

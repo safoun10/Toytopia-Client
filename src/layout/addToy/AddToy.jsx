@@ -98,8 +98,9 @@ const AddToy = () => {
 								<select
 									class="input-field form-select-lg rounded-0"
 									name="category"
+									defaultValue={"Racing Cars"}
 								>
-									<option selected value="Racing Cars">
+									<option value="Racing Cars">
 										Racing Cars
 									</option>
 									<option value="Trucks">Trucks</option>
@@ -161,6 +162,7 @@ const AddToy = () => {
 									<select
 										class="input-field form-select-lg rounded-0"
 										name="rating"
+										defaultValue={"5"}
 									>
 										<option value="1">&#9733;</option>
 										<option value="2">
@@ -172,7 +174,7 @@ const AddToy = () => {
 										<option value="4">
 											&#9733;&#9733;&#9733;&#9733;
 										</option>
-										<option selected value="5">
+										<option value="5">
 											&#9733;&#9733;&#9733;&#9733;&#9733;
 										</option>
 									</select>

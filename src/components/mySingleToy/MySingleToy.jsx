@@ -1,11 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { AiOutlineDelete} from "react-icons/ai";
+import React from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineDelete } from "react-icons/ai";
+import Swal from "sweetalert2";
 
-const MySingleToy = ({toy}) => {
-    const { seller_name, toy_name, category, price, rating, quantity , _id} =
+const MySingleToy = ({ toy }) => {
+	const { seller_name, toy_name, category, price, rating, quantity, _id } =
 		toy;
-    return (
+
+	const handleDelete = (id) => {
+		Swal.fire({
+			title: "Are you sure?",
+			text: "You won't be able to revert this!",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#3085d6",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "Yes, delete it!",
+		}).then((result) => {
+			if (result.isConfirmed) {
+				const test = `http://localhost:5000/all-toys/${id}`;
+				console.log(test);
+				fetch(`http://localhost:5000/all-toys/${id}`, {
+					method: "DELETE"
+				})
+					.then((res) => res.json())
+					.then((data) => {
+						console.log(data);
+						if(data.deletedCount > 0){
+							Swal.fire(
+								"Deleted!",
+								"Your toy has been deleted.",
+								"success"
+							);
+						}
+					});
+			}
+		});
+	};
+
+	return (
 		<>
 			<tr>
 				<th colSpan={2}>{seller_name}</th>
@@ -15,14 +48,20 @@ const MySingleToy = ({toy}) => {
 				<td>{rating}</td>
 				<td>{quantity}</td>
 				<td>
-					<Link to={`/update/${_id}`} className="text-decoration-none">
+					<Link
+						to={`/update/${_id}`}
+						className="text-decoration-none"
+					>
 						<div className="btn btn-details-chart text-zero">
 							Update
 						</div>
 					</Link>
 				</td>
 				<td>
-					<AiOutlineDelete className="fs-2 text-zero"></AiOutlineDelete>
+					<AiOutlineDelete
+						onClick={() => handleDelete(_id)}
+						className="fs-2 text-zero"
+					></AiOutlineDelete>
 				</td>
 			</tr>
 		</>
