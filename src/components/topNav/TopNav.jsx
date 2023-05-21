@@ -41,9 +41,12 @@ const TopNav = () => {
 	};
 
 	return (
-		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
-			<div className="display-4">
-				<NavLink to={"/"} className="text-decoration-none text-two d-flex">
+		<div style={{maxWidth: "1800px"}} className="px-4 py-3 row mx-auto justify-content-center align-items-center">
+			<div className="display-4 col-11 mx-auto mb-3 col-xl-3">
+				<NavLink
+					to={"/"}
+					className="text-decoration-none text-two d-flex justify-content-center "
+				>
 					<div className="me-2">
 						<BsFlower1></BsFlower1>
 					</div>
@@ -51,7 +54,7 @@ const TopNav = () => {
 				</NavLink>
 			</div>
 
-			<div className="gap-5 fs-4 d-flex justify-content-center align-items-center">
+			<div className="gap-3 gap-md-5 col-11 mx-auto mb-3 col-xl-6 fs-4 d-flex justify-content-center align-items-center">
 				<div>
 					<NavLink to={"/"} className="text-decoration-none text-two">
 						Home
@@ -95,47 +98,52 @@ const TopNav = () => {
 				)}
 			</div>
 
-			<Tooltip id="my-tooltip" />
-			{user ? (
-				<div className="d-flex justify-content-center align-items-center gap-3">
-					{user?.photoURL? (
-						<div
-							data-tooltip-id="my-tooltip"
-							data-tooltip-content={user.displayName}
-							data-tooltip-place="top"
-						>
-							<img
-								className="profile-img"
-								src={URL}
-								alt="profile_photo"
-							/>
-						</div>
-					) : (
-						<div>
-							<BsPersonCircle
+			<div className="col-11 mx-auto mb-3 col-xl-3">
+				<Tooltip id="my-tooltip" />
+				{user ? (
+					<div className="d-flex justify-content-center align-items-center gap-3">
+						{user?.photoURL ? (
+							<div
 								data-tooltip-id="my-tooltip"
-								data-tooltip-content={user.email}
+								data-tooltip-content={user.displayName}
 								data-tooltip-place="top"
-								className="display-5 text-zero"
-							></BsPersonCircle>
-						</div>
-					)}
-					<Link className="text-decoration-none text-white">
-						<div onClick={signOut} className="btn btn-bg-gradient">
-							Logout
-						</div>
-					</Link>
-				</div>
-			) : (
-				<div>
-					<Link
-						to={"/login"}
-						className="text-decoration-none text-white"
-					>
-						<div className="btn btn-bg-gradient">Login</div>
-					</Link>
-				</div>
-			)}
+							>
+								<img
+									className="profile-img"
+									src={URL}
+									alt="profile_photo"
+								/>
+							</div>
+						) : (
+							<div>
+								<BsPersonCircle
+									data-tooltip-id="my-tooltip"
+									data-tooltip-content={user.email}
+									data-tooltip-place="top"
+									className="display-5 text-zero"
+								></BsPersonCircle>
+							</div>
+						)}
+						<Link className="text-decoration-none text-white">
+							<div
+								onClick={signOut}
+								className="btn btn-bg-gradient"
+							>
+								Logout
+							</div>
+						</Link>
+					</div>
+				) : (
+					<div>
+						<Link
+							to={"/login"}
+							className="text-decoration-none text-white"
+						>
+							<div className="btn btn-bg-gradient">Login</div>
+						</Link>
+					</div>
+				)}
+			</div>
 		</div>
 	);
 };
