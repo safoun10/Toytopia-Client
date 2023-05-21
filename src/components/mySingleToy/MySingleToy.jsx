@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
 
-const MySingleToy = ({ toy }) => {
+const MySingleToy = ({ toy , toys , setToys }) => {
 	const { seller_name, toy_name, category, price, rating, quantity, _id } =
 		toy;
 
@@ -32,6 +32,8 @@ const MySingleToy = ({ toy }) => {
 								"Your toy has been deleted.",
 								"success"
 							);
+							const remaining = toys.filter(toy => toy._id !== id);
+							setToys(remaining);
 						}
 					});
 			}

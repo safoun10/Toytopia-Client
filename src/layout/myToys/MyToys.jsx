@@ -15,7 +15,9 @@ const MyToys = () => {
 		fetch("http://localhost:5000/all-toys")
 			.then((res) => res.json())
 			.then((data) => {
-				const my_toy = data.filter((toy) => toy.seller_email === user.email);
+				const my_toy = data.filter(
+					(toy) => toy.seller_email === user.email
+				);
 				setToys(my_toy);
 			});
 	}, []);
@@ -47,6 +49,8 @@ const MyToys = () => {
 									<MySingleToy
 										key={toy._id}
 										toy={toy}
+										toys={toys}
+										setToys={setToys}
 									></MySingleToy>
 								))}
 							</>
@@ -54,7 +58,9 @@ const MyToys = () => {
 					</table>
 				</div>
 				{toys.length <= 0 && (
-					<div className="tex-zero text-center display-4 mb-5">Sorry ! No toys were added by you !</div>
+					<div className="tex-zero text-center display-4 mb-5">
+						Sorry ! No toys were added by you !
+					</div>
 				)}
 			</div>
 
