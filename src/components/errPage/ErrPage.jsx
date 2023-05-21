@@ -14,12 +14,12 @@ const ErrPage = () => {
 					alt="404"
 				/>
 			</div>
-			<div className="btn btn-secondary px-5 py-2">
-				<Link className="text-decoration-none text-white" to={"/home"}>
+			<Link className="text-decoration-none text-white" to={"/home"}>
+				<div className="btn btn-secondary px-5 py-2">
 					{"<-- "}
 					Go Back To Home Page{" "}
-				</Link>
-			</div>
+				</div>
+			</Link>
 		</div>
 	);
 };

@@ -9,11 +9,13 @@ import { Tooltip } from "react-tooltip";
 
 const TopNav = () => {
 	const { user, logout } = useContext(AuthContext);
-	const [URL , setURL] = useState("")
+	const [URL , setURL] = useState("");
 
 	useEffect(()=> {
 		setURL(user?.photoURL);
 	} , [user])
+
+	console.log(URL);
 
 	const signOut = () => {
 		Swal.fire({
@@ -41,7 +43,7 @@ const TopNav = () => {
 	return (
 		<div className="px-4 py-3 d-flex justify-content-around align-items-center">
 			<div className="display-4">
-				<NavLink activeClassName="active-link" to={"/"} className="text-decoration-none text-two d-flex">
+				<NavLink to={"/"} className="text-decoration-none text-two d-flex">
 					<div className="me-2">
 						<BsFlower1></BsFlower1>
 					</div>
@@ -51,12 +53,12 @@ const TopNav = () => {
 
 			<div className="gap-5 fs-4 d-flex justify-content-center align-items-center">
 				<div>
-					<NavLink activeClassName="active-link" to={"/"} className="text-decoration-none text-two">
+					<NavLink to={"/"} className="text-decoration-none text-two">
 						Home
 					</NavLink>
 				</div>
 				<div>
-					<NavLink activeClassName="active-link"
+					<NavLink
 						to={"/blog"}
 						className="text-decoration-none text-two"
 					>
@@ -64,7 +66,7 @@ const TopNav = () => {
 					</NavLink>
 				</div>
 				<div>
-					<NavLink activeClassName="active-link"
+					<NavLink
 						to={"/all-toy"}
 						className="text-decoration-none text-two"
 					>
@@ -73,7 +75,7 @@ const TopNav = () => {
 				</div>
 				{user && (
 					<div>
-						<NavLink activeClassName="active-link"
+						<NavLink
 							to={"/my-toy"}
 							className="text-decoration-none text-two"
 						>
@@ -83,7 +85,7 @@ const TopNav = () => {
 				)}
 				{user && (
 					<div>
-						<NavLink activeClassName="active-link"
+						<NavLink
 							to={"/add-toy"}
 							className="text-decoration-none text-two"
 						>
@@ -96,7 +98,7 @@ const TopNav = () => {
 			<Tooltip id="my-tooltip" />
 			{user ? (
 				<div className="d-flex justify-content-center align-items-center gap-3">
-					{user?.photoURL ? (
+					{user?.photoURL? (
 						<div
 							data-tooltip-id="my-tooltip"
 							data-tooltip-content={user.displayName}

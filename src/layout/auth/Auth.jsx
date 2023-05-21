@@ -7,10 +7,12 @@ const Auth = () => {
     return (
 		<div>
 			<TopNav></TopNav>
-			<div className='mx-auto' style={{maxWidth: "1200px"}}>
+			<div className="mx-auto" style={{ maxWidth: "1200px" }}>
 				<Outlet></Outlet>
 			</div>
-			<Footer></Footer>
+			<div className='bg-footer'>
+				<Footer></Footer>
+			</div>
 		</div>
 	);
 };

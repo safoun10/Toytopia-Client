@@ -9,7 +9,9 @@ const Blog = () => {
         <div>
             <TopNav></TopNav>
             blogs .......
-            <Footer></Footer>
+            <div className='bg-footer'>
+                <Footer></Footer>
+            </div>
         </div>
     );
 };
