@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import "./ToysByCategory.css"
-import SingleToyByCategory from '../singleToyByCategory/SingleToyByCategory';
+import React, { useEffect, useState } from "react";
+import "./ToysByCategory.css";
+import SingleToyByCategory from "../singleToyByCategory/SingleToyByCategory";
 
 const ToysByCategory = () => {
+	const [toys, setToys] = useState([]);
+	const [category, setCategory] = useState("Racing Cars");
 
-    const [toys , setToys] = useState([]);
-    const [category, setCategory] = useState("Racing Cars");
-
-    const handleCategory = state => {
-        setCategory(state);
-    }
-    useEffect(() => {
-		fetch("http://localhost:5000/all-toys")
+	const handleCategory = (state) => {
+		setCategory(state);
+	};
+	useEffect(() => {
+		fetch("https://toytopia-server-theta.vercel.app/all-toys")
 			.then((res) => res.json())
 			.then((data) => {
 				const category_data = data.filter(
@@ -21,7 +20,7 @@ const ToysByCategory = () => {
 			});
 	}, [category]);
 
-    return (
+	return (
 		<div>
 			<div className="display-2 mb-5 text-center">Buy our toys !!</div>
 			<div className="row w-100 mx-auto">
@@ -45,8 +44,13 @@ const ToysByCategory = () => {
 				</div>
 			</div>
 			<div className="my-5 d-flex flex-column gap-3">
-                {toys.map(toy => <SingleToyByCategory key={toy?._id} toy={toy}></SingleToyByCategory>)}
-            </div>
+				{toys.map((toy) => (
+					<SingleToyByCategory
+						key={toy?._id}
+						toy={toy}
+					></SingleToyByCategory>
+				))}
+			</div>
 		</div>
 	);
 };

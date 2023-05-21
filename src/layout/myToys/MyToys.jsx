@@ -12,7 +12,7 @@ const MyToys = () => {
 
 	const [toys, setToys] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/all-toys")
+		fetch("https://toytopia-server-theta.vercel.app/all-toys")
 			.then((res) => res.json())
 			.then((data) => {
 				const my_toy = data.filter(

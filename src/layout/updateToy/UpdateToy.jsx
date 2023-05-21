@@ -65,7 +65,7 @@ const UpdateToy = () => {
 			description: description_updated,
 		};
 
-		fetch(`http://localhost:5000/all-toys/${_id}`, {
+		fetch(`https://toytopia-server-theta.vercel.app/all-toys/${_id}`, {
 			method: "PATCH",
 			headers: {
 				"content-type": "application/json",

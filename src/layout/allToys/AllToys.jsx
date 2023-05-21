@@ -10,7 +10,7 @@ const AllToys = () => {
 	const [toys, setToys] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:5000/all-toys")
+		fetch("https://toytopia-server-theta.vercel.app/all-toys")
 			.then((res) => res.json())
 			.then((data) => setToys(data));
 	}, []);
@@ -21,7 +21,9 @@ const AllToys = () => {
 				<table className="table table-striped">
 					<thead>
 						<tr className="table-dark">
-							<th colSpan={2} scope="col">Seller</th>
+							<th colSpan={2} scope="col">
+								Seller
+							</th>
 							<th colSpan={2} scope="col">
 								Toy Name
 							</th>

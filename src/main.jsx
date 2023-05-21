@@ -78,7 +78,10 @@ const router = createBrowserRouter([
 				<UpdateToy></UpdateToy>
 			</PrivateRoute>
 		),
-		loader: ({ params }) => fetch(`http://localhost:5000/all-toys/${params.ID}`),
+		loader: ({ params }) =>
+			fetch(
+				`https://toytopia-server-theta.vercel.app/all-toys/${params.ID}`
+			),
 	},
 	{
 		path: "/details/:ID",
@@ -88,7 +91,9 @@ const router = createBrowserRouter([
 			</PrivateRoute>
 		),
 		loader: ({ params }) =>
-			fetch(`http://localhost:5000/all-toys/${params.ID}`),
+			fetch(
+				`https://toytopia-server-theta.vercel.app/all-toys/${params.ID}`
+			),
 	},
 	{
 		path: "*",

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
 
-const MySingleToy = ({ toy , toys , setToys }) => {
+const MySingleToy = ({ toy, toys, setToys }) => {
 	const { seller_name, toy_name, category, price, rating, quantity, _id } =
 		toy;
 
@@ -18,21 +18,26 @@ const MySingleToy = ({ toy , toys , setToys }) => {
 			confirmButtonText: "Yes, delete it!",
 		}).then((result) => {
 			if (result.isConfirmed) {
-				const test = `http://localhost:5000/all-toys/${id}`;
+				const test = `https://toytopia-server-theta.vercel.app/all-toys/${id}`;
 				console.log(test);
-				fetch(`http://localhost:5000/all-toys/${id}`, {
-					method: "DELETE"
-				})
+				fetch(
+					`https://toytopia-server-theta.vercel.app/all-toys/${id}`,
+					{
+						method: "DELETE",
+					}
+				)
 					.then((res) => res.json())
 					.then((data) => {
 						console.log(data);
-						if(data.deletedCount > 0){
+						if (data.deletedCount > 0) {
 							Swal.fire(
 								"Deleted!",
 								"Your toy has been deleted.",
 								"success"
 							);
-							const remaining = toys.filter(toy => toy._id !== id);
+							const remaining = toys.filter(
+								(toy) => toy._id !== id
+							);
 							setToys(remaining);
 						}
 					});
