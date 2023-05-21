@@ -15,7 +15,7 @@ const TopNav = () => {
 		setURL(user?.photoURL);
 	} , [user])
 
-	console.log(URL);
+	// console.log(URL);
 
 	const signOut = () => {
 		Swal.fire({

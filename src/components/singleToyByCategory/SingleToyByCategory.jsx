@@ -44,7 +44,10 @@ const SingleToyByCategory = ({ toy }) => {
 					Price :<span className="fw-light ms-3"> ${price}</span>
 				</div>
 
-				<Link  className="text-decoration-none text-white">
+				<Link
+					to={`/details/${_id}`}
+					className="text-decoration-none text-white"
+				>
 					<div className="btn btn-details">View Details</div>
 				</Link>
 			</div>

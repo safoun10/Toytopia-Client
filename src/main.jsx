@@ -19,6 +19,9 @@ import "react-toastify/dist/ReactToastify.css";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import "react-tooltip/dist/react-tooltip.css";
 import ErrPage from "./components/errPage/ErrPage";
+import MyToys from "./layout/myToys/MyToys";
+import AddToy from "./layout/addToy/AddToy";
+import Details from "./layout/details/Details";
 
 const router = createBrowserRouter([
 	{
@@ -45,15 +48,37 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/blog",
-		element: (
-			<PrivateRoute>
-				<Blog></Blog>
-			</PrivateRoute>
-		),
+		element: <Blog></Blog>,
 	},
 	{
 		path: "/all-toy",
 		element: <AllToys></AllToys>,
+	},
+	{
+		path: "/my-toy",
+		element: (
+			<PrivateRoute>
+				<MyToys></MyToys>
+			</PrivateRoute>
+		),
+	},
+	{
+		path: "/add-toy",
+		element: (
+			<PrivateRoute>
+				<AddToy></AddToy>
+			</PrivateRoute>
+		),
+	},
+	{
+		path: "/details/:ID",
+		element: (
+			<PrivateRoute>
+				<Details></Details>
+			</PrivateRoute>
+		),
+		loader: ({ params }) =>
+			fetch(`http://localhost:5000/all-toys/${params.ID}`),
 	},
 	{
 		path: "*",

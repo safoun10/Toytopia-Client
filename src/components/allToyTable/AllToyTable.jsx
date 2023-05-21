@@ -15,7 +15,7 @@ const AllToyTable = ({ toy }) => {
 			<td>{rating}</td>
 			<td>{quantity}</td>
 			<td>
-				<Link className="text-decoration-none">
+				<Link to={`/details/${_id}`} className="text-decoration-none">
 					<div className="btn btn-details-chart text-zero">
 						Details
 					</div>
