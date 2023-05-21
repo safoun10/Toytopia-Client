@@ -1,0 +1,7 @@
+.border-custom {
+    border: 2px solid white;
+}
+
+.border-custom:hover {
+    border: 2px solid white;
+}

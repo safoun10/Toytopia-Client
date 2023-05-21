@@ -7,6 +7,7 @@ import Gallery from "../../components/gallery/Gallery";
 import useTitle from "../../components/hooks/useTitle";
 import Footer from "../../components/footer/Footer";
 import ToysByCategory from "../../components/toysByCategory/ToysByCategory";
+import NewsLetter from "../../components/newsLetter/NewsLetter";
 
 const Body = () => {
 	useTitle("Home");
@@ -25,6 +26,9 @@ const Body = () => {
 			</div>
 			<div className="mx-auto my-5 px-2" style={{ maxWidth: "1200px" }}>
 				<Gallery></Gallery>
+			</div>
+			<div className="bg-footer">
+				<NewsLetter></NewsLetter>
 			</div>
 			<div className="mx-auto my-5" style={{maxWidth : "1200px"}}>
 				<ToysByCategory></ToysByCategory>
