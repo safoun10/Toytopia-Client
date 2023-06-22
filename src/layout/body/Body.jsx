@@ -30,7 +30,7 @@ const Body = () => {
 			<div className="bg-footer">
 				<NewsLetter></NewsLetter>
 			</div>
-			<div className="mx-auto my-5" style={{maxWidth : "1200px"}}>
+			<div className="mx-auto my-5" style={{ maxWidth: "1200px" }}>
 				<ToysByCategory></ToysByCategory>
 			</div>
 			<div className="bg-footer">

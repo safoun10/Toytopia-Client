@@ -1,11 +1,11 @@
-import React from 'react';
-import TopNav from '../../components/topNav/TopNav';
-import useTitle from '../../components/hooks/useTitle';
-import Footer from '../../components/footer/Footer';
+import React from "react";
+import TopNav from "../../components/topNav/TopNav";
+import useTitle from "../../components/hooks/useTitle";
+import Footer from "../../components/footer/Footer";
 
 const Blog = () => {
-    useTitle("Blog")
-    return (
+	useTitle("Blog");
+	return (
 		<div>
 			<TopNav></TopNav>
 			<div>
