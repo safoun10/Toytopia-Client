@@ -1,6 +1,6 @@
 .bg-home-2 {
-    background: rgb(160, 132, 220);
-    background: linear-gradient(180deg, rgba(160, 132, 220, 0.6055672268907564) 6%, rgba(100, 92, 187, 1) 100%);
+    background: rgb(150, 0, 255);
+    background: linear-gradient(315deg, rgba(150, 0, 255, 1) 25%, rgba(174, 186, 248, 1) 75%);
 }
 
 .bg-footer {
